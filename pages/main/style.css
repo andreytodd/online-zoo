@@ -1,0 +1,153 @@
+body {
+    font-family: 'Roboto';
+}
+
+/* Buttons */
+
+button {
+    width: 298px;
+    height: 54px;
+    color: #FFF;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #E47209;
+}
+
+button:active {
+    background: #4B9200;
+}
+
+.rounded {
+    border-radius: 25px;
+}
+
+/* Header */
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    left: 0px;
+    right: 0px;
+}
+
+.logo-header {
+    position: absolute;
+    width: 82px;
+    height: 52px;
+    left: 150px;
+    top: 14px;
+}
+
+.navbar {
+    position: absolute;
+    left: 250px;
+    height: inherit;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar ul li a {
+    margin: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.navbar ul li a.active {
+    color: #F9804B;
+}
+
+.designed {
+    position: absolute;
+    right: 15%;
+    width: 150px;
+    height: inherit;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.designed::after {
+    content: "\00a9";
+    display: inline;
+    margin-left: 5px;
+}
+
+.designed a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* Watch block */
+
+.watch-block {
+    width: 100%;
+    height: 750px;
+    background-image: url(../../assets/images/fox-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.orange-circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 465px;
+    height: 465px;
+    left: calc(50% - 465px/2 + 239.5px);
+    top: 100px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%)
+}
+
+.watch-text {
+    position: absolute;
+    width: 500.31px;
+    height: 400px;
+    left: calc(50% - 500.31px/2 + 330.15px);
+    top: 70px;
+}
+
+.watch-text p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 106.496px;
+    line-height: 75%;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.yellow-text {
+    color: #FFEE2E
+}
+
+.watch-btn {
+    position: absolute;
+    left: calc(50% - 298px/2 + 332px);
+    top: 626px;
+}

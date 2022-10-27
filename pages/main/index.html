@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetStory Online</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 style="display: none">PetStory Online</h1>
+      <div class="logo-header">
+        <a href="./index.html">
+          <img src="../../assets/icons/logo_footer.png" alt="PetStory logo" />
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#" class="navlink active" data-text="about" onclick="clicked('about')">About</a></li>
+          <li><a href="#" class="navlink" data-text="map" onclick="clicked('map')" >Map</a></li>
+          <li><a href="#" class="navlink" data-text="zoos" onclick="clicked('zoos')">Zoos</a></li>
+          <li><a href="#" class="navlink" data-text="donate" onclick="clicked('donate')">Donate</a></li>
+          <li><a href="#" class="navlink" data-text="contact" onclick="clicked('contact')">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="designed">
+        <a href="https://www.figma.com/" target="_blank">Designed by</a>
+      </div>
+    </header>
+    <main>
+      <div class="watch-block">
+        <div class="orange-circle"></div>
+        <div class="watch-text">
+          <p>
+            Watch your <span class="yellow-text">favorite</span> animal online
+          </p>
+        </div>
+        <button type="button" class="watch-btn rounded">Watch online</button>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
