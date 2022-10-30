@@ -24,6 +24,7 @@ button {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -88,7 +89,7 @@ header {
 
 .designed {
     position: absolute;
-    right: 15%;
+    right: 10%;
     width: 150px;
     height: inherit;
     color: #FFF;
@@ -165,6 +166,13 @@ header {
 #backstage {
     width: 100%;
     height: 500px;
+    position: relative;
+}
+
+.flowers-bg {
+    position: absolute;
+    right: 0;
+    top: -100px;
 }
 
 .backstage-block {
@@ -207,18 +215,47 @@ header {
 
 #animals {
     width: 100%;
-    height: 1200px;
+    height: 1300px;
+    position: relative;
 }
 
 .animals-block {
     width: 1160px;
     height: 1100px;
-    margin: 200px auto;
+    margin: 100px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
 }
 
+.arrow-left, .arrow-right {
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 50%;
+    position: absolute;
+    top: 445px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background: #E47209;
+}
+
+.arrow-left:active, .arrow-right:active {
+    background: #4B9200;
+}
+
+.arrow-left {
+    left: 70px;
+}
+
+.arrow-right {
+    right: 70px;
+}
 
 .animals-cards {
     height: inherit;
@@ -231,37 +268,70 @@ header {
 
 .profile-card {
     width: 366px;
-    height: 426px;
+    height: 362px;
     box-sizing: border-box;
     border-radius: 5px;
-    /* display: flex;
-    flex-direction: column; */
     background-color: #FFF;
-    border: 1px solid #FA6F32;
+    position: relative;
+    z-index: 0;
 }
 
 .profile-image {
-    max-height: 100%;
-    max-width: 100%;
+    height: 362px;
+    width: 362px;
     display: block;
     margin: auto;
+    border-radius: 5px;
+    border: 1px solid #FA6F32;
 }
 
 .profile-image img {
     overflow: hidden;
     max-width: 100%;
     max-height: 100%;
-    border-radius: 4px  4px 0px 0px;
+    border-radius: 4px;
+    transform: scale(1);
+    transition-duration: .5s;
+    z-index: 2;
+}
+
+.profile-image:hover img {
+    transform: scale(1);
+    transition-duration: .5s;
+    border-radius: 5px;
+    display: inline;
+    z-index: 100;
+    -webkit-filter: brightness(70%);
+}
+
+.profile-card:hover .profile-description {
+    width: 99%;
+    position: absolute;
+    bottom: -1px;
+    left: 2px;
+    right: 3px;
+    opacity: 1;
+    z-index: 1;
+    margin: 0px auto;
+    transition: opacity .3s linear, bottom .3s linear, z-index .3s linear;
+
 }
 
 .profile-description {
-    width: 100%;
-    height: 50px;
-    background-color: #FFF;
+    width: 99%;
+    opacity: 0;
+    position: absolute;
+    bottom: -50px;
+    left: 2px;
+    right: 3px;
+    z-index: -1;
+    height: 52px;
     border-radius: 5px;
+    background-color: #FFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: opacity .3s linear, bottom .3s linear, z-index .3s linear;
 }
 
 .profile-text {
@@ -274,20 +344,20 @@ header {
     font-weight: 500;
     font-size: 16px;
     text-transform: uppercase;
-    padding-left: 15px;
+    padding-left: 5px;
 }
 
 .profile-text p {
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
-    padding-left: 15px;
+    padding-left: 5px;
     margin: 0;
 }
 
 .profile-logo {
-    padding-top: 10px;
     max-width: 40%;
+    z-index: 0;
 }
 
 .profile-logo img {
@@ -300,30 +370,453 @@ header {
     margin: 50px auto;
 }
 
-.flowers-bg {
-    position: absolute;
-    right: 0;
-    top: 750px;
-}
-
 .palm-bg {
-    position: relative;
-    top: -550px;
-    left: -40px;
+    position: absolute;
+    bottom: 0px;
+    left: -30px;
     overflow: hidden;
     z-index: -1;
 }
 
 .single-flower-bg {
     position: absolute;
-    top: 2505px;
+    bottom: 0px;
     right: 0px;
 }
 
 /* Feed block */
 
-.feed {
-    height: 500px;
+#feed {
+    height: 1000px;
     width: 100%;
-    background-color:#FFEE2E
+    overflow: auto;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%)
 }
+
+.feed-block {
+    width: 1160px;
+    height: 835px;
+    background: rgba(253, 253, 255, 0.52);
+    margin: 80px auto;
+    border-radius: 20px;
+}
+
+.feed-text {
+    padding-top: 40px;
+    padding-left: 100px;
+    width: 1000px;
+}
+
+.feed-text h4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #FE9013;
+    margin: 0;
+}
+
+.larger-text-feed {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #333B41;
+}
+
+.bold-text-feed {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333B41;
+    padding-top: 20px;
+}
+
+.normal-text-feed {
+    font-style: light;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333B41;
+}
+
+.normal-text-feed a {
+    color: #333B41;
+    text-decoration-color: #FE9013;
+}
+
+.normal-text-feed a:visited {
+    color: #333B41;
+}
+
+.feed-text h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: #333B41;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.feed-payment-block {
+    margin: auto;
+    height: 250px;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed-arrow {
+    width: 69px;
+    height: 35px;
+    margin-top: 70px;
+}
+
+.payment-card {
+    width: 168px;
+    height: 245px;
+}
+
+.card-logo {
+    width: 168px;
+    height: 168px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F9804B;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.payment-card-text p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333B41;
+}
+
+.feed-block button {
+    padding: 0;
+    display: block;
+    margin: 50px auto;
+}
+
+/* Testimonials */
+
+#testimonials {
+    height: 1000px;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.leaf-pic {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+.testimonials-block {
+    width: 1160px;
+    height: 650px;
+    position: relative;
+}
+
+.testimonials-block h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+    color: #333B41;
+}
+
+.testimonials-cards-block {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.testimonials-card {
+    min-width: 268px;
+    margin: 5px 20px;
+    height: 390px;
+    border-image: linear-gradient;
+    background: #F1F3F2;
+    border-radius: 20px;
+    position: relative;
+}
+
+.testimonials-card::before {
+    border-radius: 20px;
+    content: '';
+    background-image: linear-gradient(#FEBDABBD 74%, #F3A9F8A8 66%, #E0D8F0 100%);
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    position: absolute;
+    z-index: -1;
+}
+
+.testimonials-card-profile {
+    max-width: 100%;
+    max-height: 80px;
+    display: flex;
+    padding-top: 5px;
+}
+
+.testimonials-card-profile img {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+}
+
+.profile-log {
+    min-width: 100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.profile-log h5 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.profile-log h6 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #BDBDBD;
+}
+
+.testimonial-card-text {
+    margin: 0 auto;
+    max-width: 220px;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.testimonial-card-text p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #767474;
+}
+
+/* Scrollbar */
+
+.testimonials-cards-block::-webkit-scrollbar {
+    height: 8px;
+    border-radius: 5px;
+  }
+
+.testimonials-cards-block::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+    margin: 200px;
+}
+
+.testimonials-cards-block::-webkit-scrollbar-thumb {
+    background: #FE9013;
+    border-radius: 5px;
+}
+
+.testimonials-block button {
+    position: absolute;
+    bottom: 0px;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 443px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-left {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-social {
+    height: 30%;
+    width: 100%;
+}
+
+.social-content {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.social-content h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.social-content a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.social-icon {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding-top: 3px;
+}
+
+.footer-center {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.navbar-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.navbar-footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-footer ul li a {
+    margin: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbar-footer ul li a.active {
+    color: #F9804B;
+}
+
+.footer-right {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+form[method=post] {
+    width: 100%;
+    margin-top: 30px;
+}
+
+input[type=email] {
+    margin-top: 15px;
+    display: block;
+    border: 2px solid #F9804B;
+    background-color: #000;
+    width: 228px;
+    height: 42px;
+    display: inline;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type=email]:invalid  {
+    color: #FFF;
+}
+
+input[type=email]:valid {
+    color: #FFF;
+    border: 2px solid #4B9200;
+    outline: none;
+}
+
+input::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #BDBDBD;
+}
+
+input[type=submit] {
+    width: 129px;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid #D31414;
+    color: #D31414;
+    display: inline;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.designed-by {
+    text-align: end;
+    position: absolute;
+    bottom: 42px;
+    right: 20px;
+}
+
+.designed-by h6 {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin: 5px;
+}
+
+
+
+
+
+
