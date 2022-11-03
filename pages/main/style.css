@@ -301,6 +301,7 @@ header {
     border-radius: 5px;
     display: inline;
     z-index: 100;
+    filter: brightness();
     -webkit-filter: brightness(70%);
 }
 
