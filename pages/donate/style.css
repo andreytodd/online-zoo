@@ -1,8 +1,15 @@
 @import "../main/style.css";
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     position: relative;
 }
+
+
 
 .watch-block-donate {
     width: 100%;
@@ -14,10 +21,98 @@ header {
     box-sizing: border-box;
 }
 
-.donate-block {
-    position: relative;
-    display: block;
+/* Donate block */
+
+#donate-block {
+    padding-top: 50px;;
     width: 100%;
     height: 1480px;
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+}
+
+.donate-text {
+    margin: 0px auto;
+    width: 1160px;
+    height: 300px;
+}
+
+.donate-text h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.donate-text h3.orange {
+    padding-top: 20px;
+    color: #FE9013;
+}
+
+.donate-text p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.donate-payment {
+    width: 1160px;
+    height: 965px;
+    margin: 0px auto;
+    background: rgba(255, 255, 255, 0.52);;
+}
+
+.donate-payment-text {
+    width: 862px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+.donate-payment-text h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #FE9013;
+}
+
+.donate-payment-text p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #333B41;
+}
+
+
+/* Circles */
+
+.dot-circles {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 2px solid #FE9013;
+    box-sizing: border-box;
+}
+
+.circle.outer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.circle.inner {
+    width: 13px;
+    height: 13px;
+    margin: auto;
 }
