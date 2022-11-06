@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
+    <link rel="stylesheet"
+          href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
@@ -82,12 +84,107 @@
                 <h2>Pick and feed a friend</h2>
                 <p>We know the animals bring you joy, and in these extraordinary times, we’re glad.</p>
             </div>
-        </div>
-        <div class="dot-circles">
-            <div class="circle outer">
-                <div class="circle inner"></div>
+            <div class="donate-payment-diet">
+              <div class="diet-days">
+                <p id="days">4</p>
+                <p>Panda diet for the day.</p>
+              </div>
+              <div class="x-icon">
+                <img src="../../assets/images/x_icon.png" alt="x icon">
+              </div>
+              <div class="panda-logo">
+                <img src="../../assets/images/panda-widget.png" alt="panda logo">
+              </div>
             </div>
-
+            <div class="donate-payment-bar">
+              <div class="grey-line">
+                <div class="yellow-circle" data-amount="5000" onclick="choose('5000')">
+                  <div class="dot-circles hidden">
+                    <div class="circle outer">
+                        <div class="circle inner"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="yellow-circle" data-amount="2000" onclick="choose('2000')">
+                  <div class="dot-circles hidden">
+                    <div class="circle outer">
+                        <div class="circle inner"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="yellow-circle" data-amount="1000" onclick="choose('1000')">
+                  <div class="dot-circles">
+                    <div class="circle outer">
+                        <div class="circle inner"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="yellow-circle" data-amount="500" onclick="choose('500')">
+                  <div class="dot-circles hidden">
+                    <div class="circle outer">
+                        <div class="circle inner"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="yellow-circle" data-amount="250" onclick="choose('250')">
+                  <div class="dot-circles hidden">
+                    <div class="circle outer">
+                        <div class="circle inner"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="yellow-circle" data-amount="100" onclick="choose('100')">
+                  <div class="dot-circles hidden">
+                    <div class="circle outer">
+                        <div class="circle inner"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="yellow-circle" data-amount="50" onclick="choose('50')">
+                  <div class="dot-circles hidden">
+                    <div class="circle outer">
+                        <div class="circle inner"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="yellow-circle" data-amount="25" onclick="choose('25')">
+                  <div class="dot-circles hidden">
+                    <div class="circle outer">
+                        <div class="circle inner"></div>
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="amount-usd">
+              <p class="donation-amount" data-usd="5000">$5000</p>
+              <p class="donation-amount" data-usd="2000">$2000</p>
+              <p class="donation-amount initial" data-usd="1000">$1000</p>
+              <p class="donation-amount" data-usd="500">$500</p>
+              <p class="donation-amount" data-usd="250">$250</p>
+              <p class="donation-amount" data-usd="100">$100</p>
+              <p class="donation-amount" data-usd="50">$50</p>
+              <p class="donation-amount" data-usd="25">$25</p>
+            </div>
+            <form action="#" class="donate-form">
+              <div class="input-box">
+                <input type="number" name="currency" placeholder="Another amount">
+                <img src="../../assets/images/usd-sing.png" alt="">
+              </div>
+              <div class="radio-input-block">
+                <div class="radio-input-value">
+                  <input class="radio-selector" type="radio" id="monthly" name="donate" value="monthly"
+                         checked>
+                  <label for="monthly">Monthly</label>
+                </div>
+                <div class="radio-input-value">
+                  <input class="radio-selector" type="radio" id="once" name="donate" value="once">
+                  <label for="once">Once</label>
+                </div>
+              </div>
+              <button class="button rounded">Feed a friend now</button>
+              <p>Share with your friends on social networks</p>
+            </form>
         </div>
       </div>
     </main>

@@ -60,14 +60,15 @@ header {
 .donate-payment {
     width: 1160px;
     height: 965px;
-    margin: 0px auto;
-    background: rgba(255, 255, 255, 0.52);;
+    margin: 40px auto 0px auto;
+    background: rgba(255, 255, 255, 0.52);
+    border-radius: 20px;
 }
 
 .donate-payment-text {
-    width: 862px;
+    width: 100%;
     margin: 0px auto;
-    padding-top: 20px;
+    padding-top: 1px;
 }
 
 .donate-payment-text h2 {
@@ -77,6 +78,8 @@ header {
     line-height: 120%;
     text-align: center;
     color: #FE9013;
+    margin-bottom: 0;
+    margin-right: 7px;
 }
 
 .donate-payment-text p {
@@ -85,18 +88,139 @@ header {
     font-size: 24px;
     line-height: 120%;
     color: #333B41;
+    margin-left: 94px;
+}
+
+/* Panda diet block */
+
+.donate-payment-diet {
+    max-width: 875px;
+    height: 300px;
+    margin: 45px auto 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diet-days {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.diet-days p {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: #333B41;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+#days {
+    font-size: 70px;
+    font-weight: 900;
+    margin: 0;
+    padding-right: 12px;
+    max-height: 85px;
+}
+
+.x-icon {
+    width: 50px;
+    margin-right: 27px;
+}
+
+.panda-logo {
+    max-width: 50%;
+    padding-left: 0px;
+    margin-right: 13px;
+}
+
+.panda-logo img {
+    padding-bottom: 25px;
+}
+
+/* Interactive bar */
+
+.donate-payment-bar {
+    width: 975px;
+    height: 27px;
+    margin: 43px auto 0px auto;
+    padding: 1px;
+    background-color: #404950;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+
+.grey-line {
+    width: 915px;
+    height: 2px;
+    background-color: #72828E;
+    margin: 12px auto 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yellow-circle {
+    width: 10px;
+    height: 10px;
+    background-color: #FFEE2E;
+    border-radius:  50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yellow-circle::after {
+    content:'';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+}
+
+.amount-usd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 975px;
+    height: 60px;
+    margin: 0px auto;
+}
+
+.amount-usd p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #333B41;
+    min-width: 80px;
+    text-align: center;
+}
+
+.donation-amount.initial {
+    color: #FE9013;
 }
 
 
 /* Circles */
 
 .dot-circles {
-    height: 20px;
-    width: 20px;
+    min-height: 40px;
+    min-width: 40px;
     display: flex;
     justify-self: center;
     align-items: center;
     box-sizing: border-box;
+    z-index: 2;
 }
 
 .circle {
@@ -106,13 +230,101 @@ header {
 }
 
 .circle.outer {
-    width: 100%;
-    height: 100%;
+    min-width: 40px;
+    min-height: 40px;
     display: flex;
 }
 
 .circle.inner {
-    width: 13px;
-    height: 13px;
+    min-width: 22px;
+    min-height: 22px;
     margin: auto;
 }
+
+.hidden {
+    display: none;
+}
+
+/* Donation form */
+
+.donate-form {
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 38px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-box {
+    width: 268px;
+    height: 54px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-box img {
+    width: 10px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.donate-form input {
+    background-color: transparent;
+    border: none;
+}
+
+.radio-input-block {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin-top: 23px;
+}
+
+input[type='radio'] {
+    -webkit-appearance:none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #FE9013;
+}
+
+input[type='radio']:checked {
+    background-color: #4B9200;
+    border: none;
+}
+
+.radio-selector {
+    opacity: 1;
+    margin: auto  10px;
+}
+
+.radio-input-value {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-input-value label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333B41;
+}
+
+.donate-form button {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+

@@ -673,8 +673,17 @@ footer {
 
 .social-content {
     height: 30px;
+    width: 120px;
     display: flex;
     align-items: center;
+}
+
+.social-content:hover .social-icon {
+    background-color: #4B9200;
+}
+
+.social-content:hover a {
+    color: #4B9200;
 }
 
 .social-content h6 {
