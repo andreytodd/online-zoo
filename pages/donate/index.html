@@ -168,17 +168,16 @@
             </div>
             <form action="#" class="donate-form">
               <div class="input-box">
-                <input type="number" name="currency" placeholder="Another amount">
-                <img src="../../assets/images/usd-sing.png" alt="">
+                <input type="number" name="currency" placeholder="Another amount" max="9999" maxlength="4">
+                <img src="../../assets/images/usd-sing.png" alt="usd logo">
               </div>
               <div class="radio-input-block">
                 <div class="radio-input-value">
-                  <input class="radio-selector" type="radio" id="monthly" name="donate" value="monthly"
-                         checked>
+                  <input class="radio-selector" type="radio" id="monthly" name="donate" value="monthly">
                   <label for="monthly">Monthly</label>
                 </div>
                 <div class="radio-input-value">
-                  <input class="radio-selector" type="radio" id="once" name="donate" value="once">
+                  <input class="radio-selector" type="radio" id="once" name="donate" value="once" checked>
                   <label for="once">Once</label>
                 </div>
               </div>
