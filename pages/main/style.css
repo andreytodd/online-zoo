@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto';
     margin: 0;
     padding: 0;
+    border: 1px solid red;
 }
 
 main {
@@ -48,6 +49,7 @@ header {
     background-color: #000;
     left: 0px;
     right: 0px;
+    z-index: 3;
 }
 
 .logo-header {
@@ -113,29 +115,33 @@ header {
 
 .watch-block {
     width: 100%;
-    height: 750px;
+    height: calc(25vw + 350px);
+    /* height: 750px; */
     background-image: url(../../assets/images/fox-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     box-sizing: border-box;
+    display: flex;
 }
 
 .orange-circle {
     position: absolute;
     border-radius: 50%;
-    width: 465px;
-    height: 465px;
-    left: calc(50% - 465px/2 + 239.5px);
+    width: calc(25vw + 80px);
+    height: calc(25vw + 80px);
+    /* width: 30vw;
+    height: 30vw; */
+    left: 50vw;
     top: 100px;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%)
 }
 
 .watch-text {
     position: absolute;
-    width: 500.31px;
+    width: 30vw;
     height: 400px;
-    left: calc(50% - 500.31px/2 + 330.15px);
+    left: 55vw;
     top: 70px;
 }
 
@@ -143,8 +149,8 @@ header {
     font-style: normal;
     font-weight: 700;
     font-size: 106.496px;
+    font-size: 7vw;
     line-height: 75%;
-
     text-align: center;
     text-transform: uppercase;
 
@@ -157,33 +163,47 @@ header {
 
 .watch-btn {
     position: absolute;
-    left: calc(50% - 298px/2 + 332px);
-    top: 626px;
+    left: calc(65vw - 80px);
+    margin-top: calc(24vw + 245px);
+    /* margin-top: 39vw; */
 }
 
 /* Backstage */
 
 #backstage {
     width: 100%;
-    height: 500px;
+    height: auto;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .flowers-bg {
     position: absolute;
     right: 0;
-    top: -100px;
+}
+
+.backstage-img {
+    overflow: hidden;
+    min-width: 36vw;
+    height: 408px;
+    flex: 1 1 600px;
 }
 
 .backstage-block {
     width: 1160px;
     height: 400px;
-    margin: 130px auto;
+    /* margin: 130px auto; */
+    margin-top: 100px;
+    padding: 0 25px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .backstage-text {
-    padding: 0px 0px 0px 60px;
+    padding: 0px 0px 0px 4vw;
+    flex: 1 1 600px;
 }
 
 .backstage-text h2 {
@@ -192,6 +212,7 @@ header {
     font-weight: 400;
     font-size: 48px;
     line-height: 120%;
+    /* line-height: 4vw; */
     color: #333B41;
 }
 
@@ -199,7 +220,7 @@ header {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 130%;
+    line-height: 22.4px;
     color: #333B41;
 }
 
@@ -207,8 +228,9 @@ header {
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 250%;
+    line-height: 2em;
     color: #333B41;
+    /* margin: 0; */
 }
 
 /* Animals */
@@ -220,7 +242,7 @@ header {
 }
 
 .animals-block {
-    width: 1160px;
+    width: 80%;
     height: 1100px;
     margin: 100px auto;
     display: flex;
@@ -274,6 +296,7 @@ header {
     background-color: #FFF;
     position: relative;
     z-index: 0;
+    flex-shrink: 6;
 }
 
 .profile-image {
@@ -283,6 +306,7 @@ header {
     margin: auto;
     border-radius: 5px;
     border: 1px solid #FA6F32;
+    flex: 1 1 362px;
 }
 
 .profile-image img {
@@ -293,6 +317,7 @@ header {
     transform: scale(1);
     transition-duration: .5s;
     z-index: 2;
+    flex: 1 1 362px;
 }
 
 .profile-image:hover img {
@@ -395,7 +420,7 @@ header {
 }
 
 .feed-block {
-    width: 1160px;
+    width: 80%;
     height: 835px;
     background: rgba(253, 253, 255, 0.52);
     margin: 80px auto;
@@ -405,7 +430,8 @@ header {
 .feed-text {
     padding-top: 40px;
     padding-left: 100px;
-    width: 1000px;
+    /* width: 1000px; */
+    width: 80%;
 }
 
 .feed-text h4 {
@@ -474,11 +500,13 @@ header {
     width: 69px;
     height: 35px;
     margin-top: 70px;
+    /* flex-shrink: 1; */
 }
 
 .payment-card {
     width: 168px;
     height: 245px;
+    /* flex: 1 1 168px; */
 }
 
 .card-logo {
@@ -825,6 +853,130 @@ input[type=submit] {
     margin: 5px;
 }
 
+/* Media */
+
+@media all and (max-width: 1563px) {
+    .flowers-bg {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1400px) {
+
+    #animals {
+        height: 1150px;
+    }
+
+    .animals-block {
+        width: 98%;
+        margin-top: 65px;
+    }
+
+    .animals-cards {
+        height: 900px;
+
+    }
+
+    .profile-card {
+        height: 350px;
+        width: 290px;
+        margin: 0 5px;
+    }
+
+    .profile-image {
+        height: 350px;
+        width: 290px;
+    }
+
+    .arrow-left, .arrow-right {
+        top:450px
+    }
+
+    .profile-description {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    .animals-block button {
+        margin-top: 0;
+    }
+
+    .palm-bg {
+        bottom: -40px;
+        left: 0;
+        width: 150px;
+        height: 236px;
+    }
+
+    .feed-block {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+}
+
+@media all and (max-width: 1000px) {
+
+    main {
+        border: 1px solid red;
+    }
+
+    #feed {
+        width: 100vw;
+    }
+
+    .orange-circle {
+        width: 37vw;
+        height: 37vw;
+        top: 8.2vh;
+        left: 46vw;
+    }
+
+    .watch-text {
+        width: 40vw;
+        height: 450px;
+        left: 51.6vw;
+        letter-spacing: 2px;
+    }
+
+    .watch-text p {
+        font-size: 8.2vw;
+        margin-top: 60px;
+        line-height: 0.77em;
+    }
+
+    .watch-text p > .yellow-text {
+        left: 50vw;
+    }
+
+    .arrow-left {
+        left: 350px;
+    }
+
+    .arrow-right {
+        right: 350px;
+    }
+
+    .feed-text {
+        padding: 30px 0 0 0;
+        margin: 0px auto;
+        width: 90%;
+    }
+
+    .larger-text-feed {
+        margin-top: 20px;
+    }
+
+    .bold-text-feed {
+        margin: 0;
+        padding: 0;
+    }
+
+    .feed-text h3 {
+        padding: 0;
+    }
+
+}
 
 
 
