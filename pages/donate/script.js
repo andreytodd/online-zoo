@@ -49,3 +49,34 @@ let choose = (data) => {
     })
     )
 }
+
+const burgerMenu = document.querySelector('.icon')
+
+function openMenu() {
+    var menu = document.querySelector('.navbar')
+    var heading = document.querySelector('.main-heading')
+    if (!menu.style.display) {
+        menu.style.display = 'block'
+        heading.style.color = '#FE9013'
+    } else if (menu.style.display === 'none') {
+        menu.style.display = 'block'
+        heading.style.color = '#FE9013'
+    } else {
+        menu.style.display = 'none'
+        heading.style.color = '#FFF'
+    }
+}
+
+window.onresize = function() {
+    var menu = document.querySelector('.navbar')
+    var heading = document.querySelector('.main-heading')
+    if (document.documentElement.clientWidth > 850) {
+        menu.style.display = 'flex'
+        heading.style.color = '#FFF'
+    } else {
+        menu.style.display = 'none'
+        heading.style.color = '#FFF'
+    }
+};
+
+burgerMenu.addEventListener('click', openMenu)

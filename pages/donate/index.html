@@ -15,56 +15,61 @@
   </head>
   <body>
     <header>
-      <h1 style="display: none">PetStory Online</h1>
       <div class="logo-header">
-        <a href="../main/index.html">
-          <img src="../../assets/icons/logo_footer.png" alt="PetStory logo" />
+        <div class="heading">
+          <h1><a class="main-heading" href="../main/index.html">PetStory online</a></h1>
+          <img src="../../assets/icons/bamboo-logo.png" alt="logo-icon">
+        </div>
+      </div>
+      <div class="burger-menu">
+        <a class="icon" onclick="openMenu">
+          <i class="fa fa-bars"></i>
         </a>
       </div>
       <nav class="navbar">
-        <ul>
-          <li>
-            <a
-              href="../main/index.html"
-              class="navlink"
-              data-text="about"
-              onclick="clicked('about')"
-              >About</a
-            >
-          </li>
-          <li>
-            <a href="#" class="navlink" data-text="map" onclick="clicked('map')"
-              >Map</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="navlink"
-              data-text="zoos"
-              onclick="clicked('zoos')"
-              >Zoos</a
-            >
-          </li>
-          <li>
-            <a
-              href="../donate/index.html"
-              class="navlink active"
-              data-text="donate"
-              onclick="clicked('donate')"
-              >Donate</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contacts"
-              class="navlink"
-              data-text="contact"
-              onclick="clicked('contact')"
-              >Contact us</a
-            >
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <a
+                href="../main/index.html"
+                class="navlink active"
+                data-text="about"
+                onclick="clicked('about')"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#" class="navlink" data-text="map" onclick="clicked('map')"
+                >Map</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="navlink"
+                data-text="zoos"
+                onclick="clicked('zoos')"
+                >Zoos</a
+              >
+            </li>
+            <li>
+              <a
+                href="../donate/index.html"
+                class="navlink"
+                data-text="donate"
+                onclick="clicked('donate')"
+                >Donate</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contacts"
+                class="navlink"
+                data-text="contact"
+                onclick="clicked('contact')"
+                >Contact us</a
+              >
+            </li>
+          </ul>
       </nav>
       <div class="designed">
         <a href="https://www.figma.com/" target="_blank">Designed by</a>
@@ -188,104 +193,100 @@
       </div>
     </main>
     <footer>
-        <div class="footer-left">
-          <div class="footer-header">
-            <a href="./index.html">
-              <img src="../../assets/icons/logo_footer.png" alt="PetStory logo" />
-            </a>
+      <div class="footer-header">
+        <a href="./index.html">
+          <img src="../../assets/icons/logo_footer.png" alt="PetStory logo" />
+        </a>
+      </div>
+      <form action="#" method="post">
+        <label for="email">Subscribe to our news</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          pattern="[^ @]*@[^ @]*"
+          required
+        />
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+      <div class="footer-btn">
+        <button type="button" class="button" onclick="window.location.href='../donate/index.html'">Donate for volunteers</button>
+      </div>
+      <div class="footer-social" id="contacts">
+        <div class="social-content">
+          <div class="social-icon">
+              <a href="https://www.facebook.com/" target="_blank"><img src="../../assets/images/facebook.png" alt="facebook logo" /></a>
           </div>
-            </button>
-          <button type="button" class="button" onclick="window.location.href='../donate/index.html'">Donate for volunteers</button>
-          <div class="footer-social" id="contacts">
-            <div class="social-content">
-              <div class="social-icon">
-                  <a href="https://www.facebook.com/" target="_blank"><img src="../../assets/images/facebook.png" alt="facebook logo" /></a>
-              </div>
-              <h6><a href="https://www.facebook.com/" target="_blank">Facebook</a></h6>
-            </div>
-            <div class="social-content">
-              <div class="social-icon">
-                  <a href="https://twitter.com/"><img src="../../assets/images/Twitter.png" alt="twitter logo" /></a>
-              </div>
-              <h6><a href="https://twitter.com/">Twitter</a></h6>
-            </div>
-            <div class="social-content">
-              <div class="social-icon">
-                  <a href="https://www.instagram.com/"><img
-                  src="../../assets/images/Instagram.png"
-                  alt="instagram logo"
-                /></a>
-              </div>
-              <h6><a href="https://www.instagram.com/">Instagram</a></h6>
-            </div>
-            <div class="social-content">
-              <div class="social-icon">
-                  <a href="https://www.youtube.com/"><img src="../../assets/images/Youtube.png" alt="youtube logo" /></a>
-              </div>
-              <h6><a href="https://www.youtube.com/">Youtube</a></h6>
-            </div>
+          <h6><a href="https://www.facebook.com/" target="_blank">Facebook</a></h6>
+        </div>
+        <div class="social-content">
+          <div class="social-icon">
+              <a href="https://twitter.com/"><img src="../../assets/images/Twitter.png" alt="twitter logo" /></a>
           </div>
+          <h6><a href="https://twitter.com/">Twitter</a></h6>
         </div>
-        <div class="footer-center">
-          <nav class="navbar-footer">
-            <ul>
-              <li>
-                <a
-                  class="navlink active"
-                  data-text="about"
-                  onclick="clicked('about')"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="navlink"
-                  data-text="map"
-                  onclick="clicked('map')"
-                  >Map</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="navlink"
-                  data-text="zoos"
-                  onclick="clicked('zoos')"
-                  >Zoos</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#contacts"
-                  class="navlink"
-                  data-text="contact"
-                  onclick="clicked('contact')"
-                  >Contact us</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="footer-right">
-          <form action="#" method="post">
-            <label for="email">Subscribe to our news</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              pattern="[^ @]*@[^ @]*"
-              required
-            />
-            <input type="submit" value="Submit" id="submit" />
-          </form>
-          <div class="designed-by">
-            <h6>Designed by Alisa Samborskaya</h6>
-            <h6>©RSSchool & ©Yem Digital 2021</h6>
+        <div class="social-content">
+          <div class="social-icon">
+              <a href="https://www.instagram.com/"><img
+              src="../../assets/images/Instagram.png"
+              alt="instagram logo"
+            /></a>
           </div>
+          <h6><a href="https://www.instagram.com/">Instagram</a></h6>
         </div>
-    </footer>
+        <div class="social-content">
+          <div class="social-icon">
+              <a href="https://www.youtube.com/"><img src="../../assets/images/Youtube.png" alt="youtube logo" /></a>
+          </div>
+          <h6><a href="https://www.youtube.com/">Youtube</a></h6>
+        </div>
+      </div>
+      <nav class="navbar-footer">
+        <ul>
+          <li>
+            <a
+              class="navlink active"
+              data-text="about"
+              onclick="clicked('about')"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="navlink"
+              data-text="map"
+              onclick="clicked('map')"
+              >Map</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="navlink"
+              data-text="zoos"
+              onclick="clicked('zoos')"
+              >Zoos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contacts"
+              class="navlink"
+              data-text="contact"
+              onclick="clicked('contact')"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="designed-by">
+        <h6>Designed by Alisa Samborskaya</h6>
+        <h6>©RSSchool & ©Yem Digital 2021</h6>
+      </div>
+
+  </footer>
     <script src="./script.js"></script>
   </body>
 </html>

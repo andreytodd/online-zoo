@@ -5,17 +5,13 @@ body {
     padding: 0;
 }
 
-header {
-    position: relative;
-}
-
 
 
 .watch-block-donate {
     width: 100%;
-    height: 380px;
-    background-image: url(../../assets/images/panda_bg.png);
-    background-position: initial;
+    height: calc(20vw + 150px);
+    background-image: url(../../assets/images/Giant-Panda-BG.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     box-sizing: border-box;
@@ -24,8 +20,8 @@ header {
 /* Donate block */
 
 #donate-block {
-    padding-top: 50px;;
-    width: 100%;
+    padding-top: 50px;
+    max-width: 100%;
     height: 1480px;
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
 }
@@ -33,6 +29,7 @@ header {
 .donate-text {
     margin: 0px auto;
     width: 1160px;
+    max-width: 100vw;
     height: 300px;
 }
 
@@ -59,6 +56,7 @@ header {
 
 .donate-payment {
     width: 1160px;
+    max-width: 95%;
     height: 965px;
     margin: 40px auto 0px auto;
     background: rgba(255, 255, 255, 0.52);
@@ -149,6 +147,7 @@ header {
 
 .donate-payment-bar {
     width: 975px;
+    max-width: 84%;
     height: 27px;
     margin: 43px auto 0px auto;
     padding: 1px;
@@ -160,6 +159,7 @@ header {
 
 .grey-line {
     width: 915px;
+    max-width: 100%;
     height: 2px;
     background-color: #72828E;
     margin: 12px auto 0px auto;
@@ -188,9 +188,10 @@ header {
 
 .amount-usd {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 975px;
+    max-width: 100%;
     height: 60px;
     margin: 0px auto;
 }
@@ -317,7 +318,7 @@ input[type='radio']:checked {
 }
 
 .radio-input-value {
-    width: 120px;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -335,4 +336,133 @@ input[type='radio']:checked {
     margin-top: 30px;
     margin-bottom: 15px;
 }
+
+footer {
+    margin-top: 0;
+}
+
+@media all and (max-width: 1200px) {
+
+    #donate-block {
+        padding-top: 50px;
+        max-width: 100%;
+        height: 1360px;
+    }
+
+    .donate-payment {
+        margin: 40px 22px 0px 22px;
+    }
+
+    [data-amount="5000"] {
+        display: none;
+    }
+
+    [data-usd="5000"] {
+        display: none;
+    }
+
+    .donate-payment-bar {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+}
+
+
+@media all and (max-width: 840px) {
+
+    #donate-block {
+        padding-top: 10px;
+        height: 1320px;
+    }
+
+    .donate-text {
+        max-width: 95%;
+    }
+
+    .donate-text h3 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 120%;
+        margin-bottom: 10px;
+    }
+
+    .donate-text h3.orange {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 130%;
+        margin-top: 0;
+        padding-top: 15px;
+    }
+
+    .donate-payment {
+        margin: 35px auto 0px auto;
+        max-height: 920px;
+    }
+
+    .donate-payment h2 {
+        margin-top: 28px;
+    }
+
+    .donate-payment-text p {
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .donate-payment-bar {
+        margin-top: 20px;
+        min-width: 99%;
+    }
+
+    [data-amount="2000"] {
+        display: none;
+    }
+
+    [data-usd="2000"] {
+        display: none;
+    }
+
+    [data-amount="1000"] {
+        display: none;
+    }
+
+    [data-usd="1000"] {
+        display: none;
+    }
+
+    .grey-line {
+        min-width: 80%;
+        width: 87%;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+
+    .amount-usd {
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 20px;
+        width: 96%;
+    }
+
+    .input-box {
+        max-width: 180px;
+        height: 42px;
+    }
+
+    input[type="number"] {
+        width: 150px;
+    }
+
+    .input-box img {
+        margin-right: 50px;
+    }
+
+    .radio-input-value:nth-of-type(2) {
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+
+}
+
+
 
