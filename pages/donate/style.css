@@ -464,5 +464,161 @@ footer {
 
 }
 
+@media all and (max-width: 510px) {
+    .watch-block-donate {
+        background-size: 250%;
+        background-position: -160px;
+        background-position-y: -70px;
+        height: calc(20vw + 158px);
+    }
+
+    #donate-block {
+        height: 1130px;
+    }
+
+    .donate-payment {
+        height: 600px;
+    }
+
+    .donate-text {
+        height: 470px;
+    }
+
+    .donate-text h3.orange {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 120%;
+        padding-top: 35px;
+    }
+
+    .donate-text p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        min-width: 97vw;
+    }
+
+    /* Donate payment */
+
+    .donate-payment-text h2 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 120%;
+        margin-top: 18px;
+    }
+
+    .donate-payment-text p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        margin-top: 10px;
+    }
+
+    .donate-payment {
+        margin: 20px auto 0px auto;
+    }
+
+    .donate-payment-diet {
+        margin-top: 0;
+        height: 140px;
+    }
+
+    .donate-payment-diet p {
+        font-weight: 400;
+        font-size: 9.02255px;
+        line-height: 140%;
+        padding: 5  px 0 0 0;
+    }
+
+    .diet-days {
+        width: 280px;
+    }
+
+    .diet-days p {
+        padding-right: 0;
+    }
+
+    #days {
+        font-weight: 500;
+        font-size: 40.6015px;
+        line-height: 80%;
+        padding-right: 5px;
+    }
+
+    .panda-logo img {
+        width: 160px;
+        height: 138px;
+    }
+
+    .x-icon img {
+        height: 7.89px;
+        width: 7.89px;
+        padding-bottom: 10px;
+    }
+
+    .donate-payment-bar {
+        height: 13.5px;
+        margin: 0px auto;
+        min-width: 92vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .grey-line {
+        margin: 0;
+    }
+
+    .yellow-circle {
+        height: 5px;
+        width: 5px;
+    }
+
+    .amount-usd {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        justify-content: space-evenly;
+        height: 30px;
+    }
+
+    .amount-usd p {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 140%;
+        min-width: 60px;
+        max-width: 50px;
+    }
+
+    .dot-circles {
+        min-width: 25px;
+        min-height: 25px;
+    }
+
+    .circle.inner {
+        min-width: 14px;
+        min-height: 14px;
+    }
+
+    .circle.outer {
+        min-width: 25px;
+        min-height: 25px;
+    }
+
+    .donate-form {
+        max-width: 90vw;
+        margin-top: 15px;
+    }
+
+    .donate-form p {
+        min-width: 100%;
+    }
+
+    .radio-input-block div:nth-of-type(1) {
+        padding-left: 18px;
+    }
+}
+
 
 
