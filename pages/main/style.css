@@ -1600,6 +1600,12 @@ input[type=submit] {
 
 }
 
+@media all and (min-width: 444px) and (max-width: 624px) {
+    .watch-block button {
+        margin-top: 300px;
+    }
+}
+
 @media all and (max-width: 624px) {
 
     /* Watch Block */
@@ -1617,11 +1623,23 @@ input[type=submit] {
         margin: 235px auto 0px auto;
     }
 
+    .orange-circle {
+        left: calc(50% - 119.09px/2 + 62.45px);
+        top: 60px;
+    }
+
+    .watch-text {
+        left: 57vw;
+        top: 20px;
+    }
+
+
     /* Backstage */
 
     #backstage {
-        height: 420px;
+        height: 430px;
         width: 100vw;
+        overflow: hidden;
     }
 
     .backstage-block {
@@ -1670,8 +1688,9 @@ input[type=submit] {
     }
 
     #animals {
-        height: 1500px;
+        height: 1550px;
         position: relative;
+        overflow: hidden;
     }
 
     .animals-block {
