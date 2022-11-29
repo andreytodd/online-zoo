@@ -1051,6 +1051,12 @@ input[type=submit] {
 
 }
 
+@media all and (min-width: 1225px) and (max-width: 1400px) {
+    .profile-card {
+        margin: 30px;
+    }
+}
+
 @media all and (max-width: 1000px) {
 
     body {
@@ -1125,6 +1131,70 @@ input[type=submit] {
     .feed-payment-block {
         width: 750px;
     }
+
+}
+
+@media all and (max-width: 920px) {
+
+#animals {
+    height: 1030px;
+}
+
+.animals-block {
+    margin-top: 40px;
+    height: 1000px;
+    margin-bottom: 0;
+}
+
+.animals-cards div:nth-of-type(4) {
+    display: none;
+}
+
+.animals-cards div:nth-of-type(6) {
+    display: none;
+}
+
+.animals-cards {
+    height: 850px;
+}
+
+.profile-card {
+    width: 285px;
+    height: 332px;
+    margin: 0 10px;
+}
+
+.profile-image {
+    width: 285px;
+    height: 332px;
+}
+
+.profile-logo {
+    margin-top: 10px;
+}
+
+.arrow-left, .arrow-right {
+    top: 405px;
+}
+
+.arrow-left {
+    left: 240px;
+}
+
+.arrow-right {
+    right: 240px;
+}
+
+.palm-bg {
+    left: -28px;
+    bottom: -50px;
+}
+
+.single-flower-bg {
+    width: 184px;
+    height: 137px;
+    bottom: -5px;
+}
 
 }
 
@@ -1530,7 +1600,7 @@ input[type=submit] {
 
 }
 
-@media all and (max-width: 510px) {
+@media all and (max-width: 624px) {
 
     /* Watch Block */
 
