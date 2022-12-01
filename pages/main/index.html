@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <div id="page-mask" style="display: none"></div>
     <header>
       <div class="logo-header">
         <div class="heading">
@@ -21,7 +22,7 @@
         </div>
       </div>
       <div class="burger-menu">
-        <a class="icon" onclick="openMenu">
+        <a class="icon">
           <i class="fa fa-bars"></i>
         </a>
       </div>
@@ -113,13 +114,16 @@
       </div>
       <div id="animals">
         <div class="animals-block">
-          <div class="arrow-left">
+          <!-- <div class="arrow-left">
             <img src="../../assets/images/arrow-left.png" alt="left arrow" />
           </div>
           <div class="arrow-right">
             <img src="../../assets/images/arrow-right.png" alt="left arrow" />
-          </div>
+          </div> -->
           <div class="animals-cards">
+            <div class="arrow-left">
+              <img src="../../assets/images/arrow-left.png" alt="left arrow" />
+            </div>
             <div class="profile-card">
               <div class="profile-image">
                 <img
@@ -224,6 +228,9 @@
                   />
                 </div>
               </div>
+            </div>
+            <div class="arrow-right">
+              <img src="../../assets/images/arrow-right.png" alt="left arrow" />
             </div>
           </div>
           <button type="button" class="button rounded">
@@ -521,6 +528,7 @@
         </div>
 
     </footer>
+    <script src="../../js/script.js" type="module"></script>
     <script src="./script.js"></script>
   </body>
 </html>

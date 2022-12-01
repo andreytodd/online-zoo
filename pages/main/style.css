@@ -9,6 +9,16 @@ main {
     margin-right: 0;
 }
 
+#page-mask {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
 /* Buttons */
 
 button {
@@ -276,7 +286,6 @@ h1 a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
 }
 
 .arrow-left, .arrow-right {
@@ -300,11 +309,16 @@ h1 a {
 }
 
 .arrow-left {
+    /* grid-row: span 3;
+    grid-area: arrow-left; */
+
     left: 70px;
 }
 
 .arrow-right {
     right: 70px;
+    /* grid-row: 1 / span 2;
+    grid-area: arrow-right; */
 }
 
 .animals-cards {
@@ -314,6 +328,17 @@ h1 a {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
+
+    /* max-width: 100vw;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+        "arrow-left card card card arrow-right"
+        "arrow-left card card card arrow-right"
+; */
 }
 
 .profile-card {
@@ -1146,7 +1171,7 @@ input[type=submit] {
     margin-bottom: 0;
 }
 
-.animals-cards div:nth-of-type(4) {
+.animals-cards div:nth-of-type(5) {
     display: none;
 }
 
@@ -1305,6 +1330,11 @@ input[type=submit] {
 
     /* Backstage */
 
+    #backstage {
+        overflow: hidden;
+        height: 470px;
+    }
+
     .backstage-block {
         margin-top: 5px;
         padding-left: 10px;
@@ -1360,7 +1390,7 @@ input[type=submit] {
         margin-bottom: 0;
     }
 
-    .animals-cards div:nth-of-type(4) {
+    .animals-cards div:nth-of-type(5) {
         display: none;
     }
 
@@ -1621,6 +1651,7 @@ input[type=submit] {
         display: block;
         position: inherit;
         margin: 235px auto 0px auto;
+        transition: all 1s;
     }
 
     .orange-circle {
@@ -1691,6 +1722,7 @@ input[type=submit] {
         height: 1550px;
         position: relative;
         overflow: hidden;
+        transition: all 0.5s;
     }
 
     .animals-block {
@@ -1698,6 +1730,7 @@ input[type=submit] {
         flex-direction: column;
         justify-content: flex-end;
         margin-top: 50px;
+        transition: all 1s;
     }
 
     .animals-block button {
@@ -1711,6 +1744,7 @@ input[type=submit] {
 
     .profile-card {
         margin-bottom: 15px;
+        transition: all 0.5s;
     }
 
     .palm-bg {
