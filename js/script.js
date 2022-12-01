@@ -3,18 +3,18 @@
 // Navbar elements active state change
 
 let navlinks = document.querySelectorAll('.navlink')
-
-function clicked(data) {
-  navlinks.forEach(navlink => navlink.classList.remove('active'))
-  navlinks.forEach(navlink => {
-      if (navlink.getAttribute('data-text') === data) {
-          navlink.classList.add('active')
-      }
-  })
-}
-
 const navbar = document.querySelector('.navbar')
 
+navbar.addEventListener('click', function(event) {
+  navlinks.forEach(navlink => navlink.classList.remove('active'))
+  navlinks.forEach(navlink => {
+    if (navlink.getAttribute('data-text') === event.target.dataset.text) {
+        navlink.classList.add('active')
+    }
+})
+})
+
+/* Form */
 
 const submitBtn = document.getElementById('submit')
 

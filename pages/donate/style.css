@@ -188,7 +188,7 @@ body {
 
 .amount-usd {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 975px;
     max-width: 100%;
@@ -297,6 +297,7 @@ input::-webkit-inner-spin-button {
     justify-content: center;
     width: 500px;
     margin-top: 23px;
+    overflow: hidden;
 }
 
 input[type='radio'] {
@@ -470,6 +471,7 @@ footer {
         background-position: -160px;
         background-position-y: -70px;
         height: calc(20vw + 158px);
+        overflow: hidden;
     }
 
     #donate-block {
@@ -620,7 +622,3 @@ footer {
     }
 }
 
-
-.container {
-    display: grid;
-}
