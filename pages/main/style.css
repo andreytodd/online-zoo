@@ -1061,10 +1061,15 @@ input[type=submit] {
         margin: 50px 5px;
     }
 
+    .profile-card:hover .profile-description {
+        transition: none;
+    }
+
     .profile-image {
         height: 350px;
         width: 290px;
     }
+
 
     .arrow-left, .arrow-right {
         top:450px
@@ -1073,6 +1078,7 @@ input[type=submit] {
     .profile-description {
         opacity: 1;
         bottom: 0;
+        transition: none;
     }
 
     .animals-block button {

@@ -23,3 +23,48 @@ donateBar.addEventListener('click', function(event) {
     )
 })
 
+/* Burger menu */
+
+const menu = document.querySelector('.navbar');
+const burgerMenu = document.querySelector('.icon')
+const heading = document.querySelector('.main-heading')
+const pageMask = document.getElementById('page-mask')
+
+function openMenu() {
+    if (!menu.style.display) {
+        menu.style.display = 'block'
+        heading.style.color = '#FE9013'
+        pageMask.style.display = 'block'
+    } else if (menu.style.display === 'none') {
+        menu.style.display = 'block'
+        heading.style.color = '#FE9013'
+        pageMask.style.display = 'block'
+    } else {
+        menu.style.display = 'none'
+        heading.style.color = '#FFF'
+        pageMask.style.display = 'none'
+    }
+}
+
+window.onresize = function() {
+    if (document.documentElement.clientWidth > 850) {
+        menu.style.display = 'flex'
+        heading.style.color = '#FFF'
+        pageMask.style.display = 'none'
+    } else {
+        menu.style.display = 'none'
+        heading.style.color = '#FFF'
+        pageMask.style.display = 'none'
+    }
+};
+
+burgerMenu.addEventListener('click', openMenu)
+
+document.addEventListener('click', function handleClickOutsideMenu(event) {
+    if (event.target.id == 'page-mask') {
+        menu.style.display = 'none'
+        heading.style.color = '#FFF'
+        pageMask.style.display = 'none'
+    }
+  });
+

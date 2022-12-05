@@ -81,6 +81,7 @@ const carousel = document.querySelector('.animals-cards')
 
 carousel.insertAdjacentHTML('beforeend', `
       <div class="slide slide1 fade" data-index="1"></div>
+      <div class="slide slide2 fade" data-index="1"></div>
     `)
 
 function randomSlides() {
@@ -90,8 +91,11 @@ function randomSlides() {
 }
 
 const slide1 = document.querySelector('.slide1')
+const slide2 = document.querySelector('.slide2')
 const prev = document.querySelector('.arrow-left')
 const next = document.querySelector('.arrow-right')
+
+
 
 function shuffleSlideRight() {
   next.removeEventListener('click', shuffleSlideRight)
