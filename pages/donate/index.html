@@ -34,12 +34,11 @@
                 href="../main/index.html"
                 class="navlink active"
                 data-text="about"
-                onclick="clicked('about')"
                 >About</a
               >
             </li>
             <li>
-              <a href="#" class="navlink" data-text="map" onclick="clicked('map')"
+              <a href="#" class="navlink" data-text="map"
                 >Map</a
               >
             </li>
@@ -48,7 +47,6 @@
                 href="#"
                 class="navlink"
                 data-text="zoos"
-                onclick="clicked('zoos')"
                 >Zoos</a
               >
             </li>
@@ -57,7 +55,6 @@
                 href="../donate/index.html"
                 class="navlink"
                 data-text="donate"
-                onclick="clicked('donate')"
                 >Donate</a
               >
             </li>
@@ -66,7 +63,6 @@
                 href="#contacts"
                 class="navlink"
                 data-text="contact"
-                onclick="clicked('contact')"
                 >Contact us</a
               >
             </li>
@@ -104,56 +100,56 @@
             </div>
             <div class="donate-payment-bar">
               <div class="grey-line">
-                <div class="yellow-circle" data-amount="5000" onclick="choose('5000')">
+                <div class="yellow-circle" data-amount="5000">
                   <div class="dot-circles hidden">
                     <div class="circle outer">
                         <div class="circle inner"></div>
                     </div>
                     </div>
                 </div>
-                <div class="yellow-circle" data-amount="2000" onclick="choose('2000')">
+                <div class="yellow-circle" data-amount="2000">
                   <div class="dot-circles hidden">
                     <div class="circle outer">
                         <div class="circle inner"></div>
                     </div>
                     </div>
                 </div>
-                <div class="yellow-circle" data-amount="1000" onclick="choose('1000')">
+                <div class="yellow-circle" data-amount="1000">
                   <div class="dot-circles hidden">
                     <div class="circle outer">
                         <div class="circle inner"></div>
                     </div>
                     </div>
                 </div>
-                <div class="yellow-circle" data-amount="500" onclick="choose('500')">
+                <div class="yellow-circle" data-amount="500">
                   <div class="dot-circles hidden">
                     <div class="circle outer">
                         <div class="circle inner"></div>
                     </div>
                     </div>
                 </div>
-                <div class="yellow-circle" data-amount="250" onclick="choose('250')">
+                <div class="yellow-circle" data-amount="250">
                   <div class="dot-circles hidden">
                     <div class="circle outer">
                         <div class="circle inner"></div>
                     </div>
                     </div>
                 </div>
-                <div class="yellow-circle" data-amount="100" onclick="choose('100')">
+                <div class="yellow-circle" data-amount="100">
                   <div class="dot-circles">
                     <div class="circle outer">
                         <div class="circle inner"></div>
                     </div>
                     </div>
                 </div>
-                <div class="yellow-circle" data-amount="50" onclick="choose('50')">
+                <div class="yellow-circle" data-amount="50">
                   <div class="dot-circles hidden">
                     <div class="circle outer">
                         <div class="circle inner"></div>
                     </div>
                     </div>
                 </div>
-                <div class="yellow-circle" data-amount="25" onclick="choose('25')">
+                <div class="yellow-circle" data-amount="25">
                   <div class="dot-circles hidden">
                     <div class="circle outer">
                         <div class="circle inner"></div>
@@ -174,7 +170,7 @@
             </div>
             <form action="#" class="donate-form">
               <div class="input-box">
-                <input type="number" name="currency" placeholder="Another amount" max="9999" maxlength="4">
+                <input class="input-donate" type="number" name="currency" placeholder="Another amount" max="9999" maxlength="4">
                 <img src="../../assets/images/usd-sing.png" alt="usd logo">
               </div>
               <div class="radio-input-block">
@@ -289,6 +285,6 @@
       </div>
 
   </footer>
-    <script src="../../js/script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -295,7 +295,7 @@ input::-webkit-inner-spin-button {
 .radio-input-block {
     display: flex;
     justify-content: center;
-    width: 500px;
+    max-width: 500px;
     margin-top: 23px;
     overflow: hidden;
 }
