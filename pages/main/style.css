@@ -17,6 +17,7 @@ main {
     bottom: 0;
     left: 0;
     z-index: 3;
+    display: none;
   }
 
 /* Buttons */
@@ -679,6 +680,16 @@ h1 a {
     animation-duration: 0.3s;
 }
 
+.testimonials-card.show {
+    position: absolute;
+    z-index: 10000;
+    min-width: 20vw;
+}
+
+.testimonials-card.show > .testimonial-card-text {
+    height: 80%;
+}
+
 
 
 .testimonials-card::before {
@@ -787,7 +798,6 @@ input[type='range'] {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
     height: 5px;
     width: 80px;
     border-radius: 5px;

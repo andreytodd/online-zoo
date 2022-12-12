@@ -72,6 +72,8 @@ document.addEventListener('click', function handleClickOutsideMenu(event) {
         menu.style.display = 'none'
         heading.style.color = '#FFF'
         pageMask.style.display = 'none'
+        let cards = document.querySelectorAll('.testimonials-card')
+        cards.forEach(card => card.classList.remove('show'))
     }
   });
 
@@ -233,3 +235,15 @@ slider.oninput = function() {
 
 }
 
+document.onclick = function(event) {
+
+  if (window.innerWidth <= 850) {
+    let clickedCard = event.target.closest('.testimonials-card')
+    clickedCard.classList.add('show')
+    if (pageMask.style.display = 'none') {
+      pageMask.style.display = 'block'
+    } else {
+      pageMask.style.display = 'none'
+    }
+  }
+}
